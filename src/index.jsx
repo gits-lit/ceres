@@ -16,12 +16,12 @@ const App = () => {
   return (
     <Provider store={store}>
       <ConnectedRouter history={history}>
-        <>
+        <div className="App">
           <Switch>
             <Route exact path="/garden" component={GardenPage} />
             <Route path="/" component={HomePage} />
           </Switch>
-        </>
+        </div>
       </ConnectedRouter>
     </Provider>
   );

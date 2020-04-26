@@ -5,7 +5,7 @@ import './style.less';
 import Field from '../Field';
 import Navbar from '../Navbar';
 import Tips from '../Tips';
-import Slider from '../Slider';
+import SliderCard from '../SliderCard';
 import Dashboard from '../Dashboard';
 import Analytics from '../Analytics';
 
@@ -36,7 +36,7 @@ const Garden = props => {
               <div style={{ height: '43px' }}>
                 <img style={{ marginTop: '14px'}}src={time} alt={time} />
               </div>
-              <Slider />
+              <SliderCard />
             </div>
           </div>
         </div>

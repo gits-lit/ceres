@@ -5,7 +5,9 @@ import './style.less';
 const Tips = props => {
   return (
     <div className="tips">
-      <h1>owo</h1>
+      <div className="tips_wrapper"> 
+        <h1>Lorem ipsum</h1>
+      </div>
     </div>
   );
 };
