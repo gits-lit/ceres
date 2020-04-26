@@ -28,7 +28,7 @@ const SliderCard = props => {
   return (
     <div className="slidercard">
       <div className="slider_wrapper">
-        <h1>Start</h1>
+        <h1>Slide across different time</h1>
         <div className="icon-wrapper">
           <FrownOutlined className={preColorCls} />
           <Slider
