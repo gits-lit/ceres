@@ -17,28 +17,37 @@ const Garden = props => {
   return (
     <div className="garden">
       <Navbar />
-      <div className="side_div">
-        <div className="side_wrapper">
-          <div className="c_wrapper">
-            <Canvas>
-              <Suspense fallback={null}>
-                <ambientLight />
-                <pointLight intensity={.4} position={[10000, 10000, 10000]} />
-                <Field />
-              </Suspense>
-            </Canvas>
-          </div>
-          <div className="side_row">
-            <div className="ceres_text">
-              <img src={tips} alt={tips} />
-              <Tips />
+      <div className="flex_wrapper">
+        <div className="side_div">
+          <div className="side_wrapper">
+            <div className="c_wrapper">
+              <Canvas>
+                <Suspense fallback={null}>
+                  <ambientLight />
+                  <pointLight intensity={0.4} position={[10000, 10000, 10000]} />
+                  <Field />
+                </Suspense>
+              </Canvas>
             </div>
-            <div className="slider_text">
-              <div style={{ height: '43px' }}>
-                <img style={{ marginTop: '14px'}}src={time} alt={time} />
+            <div className="side_row">
+              <div className="ceres_text">
+                <img src={tips} alt={tips} />
+                <Tips />
               </div>
-              <SliderCard />
+              <div className="slider_text">
+                <div style={{ height: '43px' }}>
+                  <img style={{ marginTop: '14px' }} src={time} alt={time} />
+                </div>
+                <SliderCard />
+              </div>
             </div>
+          </div>
+        </div>
+        <div className="right_div">
+          <div className="right_wrapper">
+            <h1>Snu's Garden <span className="location">| Location: UCSD</span></h1>
+            <Dashboard />
+            <Analytics />
           </div>
         </div>
       </div>
