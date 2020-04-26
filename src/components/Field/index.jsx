@@ -12,7 +12,7 @@ function Dirt(props) {
       {...props}
       >
       <boxBufferGeometry attach="geometry" args={[500, 10, 500]} />
-      <meshStandardMaterial attach="material" color={"#9B7653"} />
+      <meshStandardMaterial attach="material" color={"#493829"} />
     </mesh>
   )
 }
