@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import './styles/style.less'
 import GardenPage from './containers/GardenPage';
 
 const App = () => {
   return (
-    <div>
+    <div className="App">
       <GardenPage />
     </div>
   );
