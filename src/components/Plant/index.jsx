@@ -1,23 +1,24 @@
-import React, { useRef, useState } from 'react'
-import { Canvas, useFrame } from 'react-three-fiber';
+import React, { useState, useMemo } from 'react'
+import { Canvas, useFrame, useLoader } from 'react-three-fiber';
 
 import './style.less';
+import { OBJLoader2 } from "three/examples/jsm/loaders/OBJLoader2";
+import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+
 
 function Plant(props) {
-  // This reference will give us direct access to the mesh
-  const mesh = useRef()
-
-  // Rotate mesh every frame, this is outside of React without overhead
+  /*const mtl = 'cabbage.mtl';
+  const obj = 'cabbage.obj';
+  const materialLoaded = useLoader(MTLLoader, mtl);
+  const objLoaded = useLoader(OBJLoader2, obj);*/
+  const gltf = useLoader(GLTFLoader, '/bell-pepper.gltf')
 
   return (
-    <mesh
-      {...props}
-      ref={mesh}
-      >
-      <boxBufferGeometry attach="geometry" args={[100, 100, 100]} />
-      <meshStandardMaterial attach="material" color={"#32CD32"} />
-    </mesh>
+    <primitive object={gltf.scene}/>
   )
 }
 
 export default Plant;
+
+//map={texture} />
