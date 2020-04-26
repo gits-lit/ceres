@@ -14,6 +14,8 @@ import time from '../../assets/time.svg';
 import bg2 from '../../assets/bg-page3.svg';
 
 const Garden = props => {
+
+  const [crops, setCrop] = useState([]);
   return (
     <div className="garden">
       <Navbar />
@@ -24,8 +26,8 @@ const Garden = props => {
               <Canvas>
                 <Suspense fallback={null}>
                   <ambientLight />
-                  <pointLight intensity={0.4} position={[10000, 10000, 10000]} />
-                  <Field />
+                  <pointLight intensity={0.7} position={[10000, 10000, 10000]} />
+                  <Field crops={props.crops}/>
                 </Suspense>
               </Canvas>
             </div>
