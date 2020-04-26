@@ -13,8 +13,8 @@ function Plant(props) {
     <mesh
       {...props}
       ref={mesh}
-      scale={[.01, .01, .01]}>
-      <boxBufferGeometry attach="geometry" args={[200, 200, 200]} />
+      >
+      <boxBufferGeometry attach="geometry" args={[100, 100, 100]} />
       <meshStandardMaterial attach="material" color={"#32CD32"} />
     </mesh>
   )
