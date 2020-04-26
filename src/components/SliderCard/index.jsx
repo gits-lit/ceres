@@ -31,7 +31,7 @@ const SliderCard = props => {
   return (
     <div className="slidercard">
       <div className="slider_wrapper">
-        <h1>Slide across to call Janus to change time! You can plant crops at different time periods.</h1>
+        <h1>Call Janus to change time! Plant crops at different time periods.</h1>
         <div className="icon-wrapper">
           <FrownOutlined className={preColorCls} />
           <Slider
