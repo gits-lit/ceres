@@ -6,6 +6,8 @@ import Field from '../Field';
 import Navbar from '../Navbar';
 import Tips from '../Tips';
 import Slider from '../Slider';
+import Dashboard from '../Dashboard';
+import Analytics from '../Analytics';
 
 import tips from '../../assets/tips.svg';
 import time from '../../assets/time.svg';
@@ -15,6 +17,7 @@ const Garden = props => {
   return (
     <div className="garden">
       <Navbar />
+      <div className="flex_wrapper">
       <div className="side_div">
         <div className="side_wrapper">
           <div className="c_wrapper">
@@ -37,6 +40,14 @@ const Garden = props => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="right_div">
+        <div className="right_wrapper">
+          <h1>Snu's Garden <span className="location">| Location: UCSD </span></h1>
+          <Dashboard />
+          <Analytics />
+        </div>
+      </div>
       </div>
       <img className="bg" src={bg2} alt="bg" />
     </div>
