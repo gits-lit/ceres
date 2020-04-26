@@ -9,7 +9,7 @@ function Onion(props) {
  const { nodes, materials, animations } = useLoader(GLTFLoader, '/onions.gltf')
 
  return (
-   <group ref={group} {...props} dispose={null} scale={[0.6, 0.6, 0.6]}>
+   <group ref={group} {...props} dispose={null} scale={[props.scale*0.6, props.scale*0.6, props.scale*0.6]}>
      <scene name="AuxScene">
        <group>
          <mesh
@@ -359,7 +359,7 @@ function Tomato(props) {
   const { nodes, materials, animations } = useLoader(GLTFLoader, '/tomatoes.gltf')
 
   return (
-    <group ref={group} {...props} dispose={null} scale={[0.6, 0.6, 0.6]}>
+    <group ref={group} {...props} dispose={null} scale={[props.scale*0.6, props.scale*0.6, props.scale*0.6]}>
       <scene name="AuxScene">
         <group>
           <mesh
@@ -752,7 +752,7 @@ function Cabbage(props) {
   const { nodes, materials, animations } = useLoader(GLTFLoader, '/cabbages.gltf')
 
   return (
-    <group ref={group} {...props} dispose={null} scale={[0.7, 0.7, 0.7]}>
+    <group ref={group} {...props} dispose={null} scale={[props.scale*0.7, props.scale*0.7, props.scale*0.7]}>
       <scene name="AuxScene">
         <group>
           <mesh
@@ -948,7 +948,7 @@ function BellPepper(props) {
   const { nodes, materials, animations } = useLoader(GLTFLoader, '/bellPeppers.gltf')
 
   return (
-    <group ref={group} {...props} dispose={null} position={props.position} scale={[0.7,0.7,0.7]}>
+    <group ref={group} {...props} dispose={null} position={props.position} scale={[props.scale*0.7, props.scale*0.7, props.scale*0.7]}>
       <scene name="AuxScene">
         <group>
           <mesh
@@ -1312,7 +1312,7 @@ function Potato(props) {
   const { nodes, materials, animations } = useLoader(GLTFLoader, '/potatoes.gltf')
 
   return (
-    <group ref={group} {...props} dispose={null} position={props.position} scale={[.5, .5, .5]}>
+    <group ref={group} {...props} dispose={null} position={props.position} scale={[props.scale*0.5, props.scale*0.5, props.scale*0.5]}>
       <scene name="AuxScene">
         <group>
           <mesh
@@ -1456,7 +1456,7 @@ function Carrot(props) {
   const { nodes, materials, animations } = useLoader(GLTFLoader, '/carrots.gltf')
 
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null} scale={[props.scale, props.scale, props.scale]}>
       <scene name="AuxScene">
         <group>
           <mesh
@@ -1742,11 +1742,13 @@ function Carrot(props) {
 
 
 const Plant = props => {
+  console.log(props.scale);
   if(props.name === 'potatoes') {
     return (
       <Potato
         position={props.position}
         name={props.name}
+        scale={props.scale}
       />
     );
   }
@@ -1755,6 +1757,7 @@ const Plant = props => {
       <Tomato
         position={props.position}
         name={props.name}
+        scale={props.scale}
       />
     );
   }
@@ -1763,6 +1766,7 @@ const Plant = props => {
       <Cabbage
         position={props.position}
         name={props.name}
+        scale={props.scale}
       />
     );
   }
@@ -1771,6 +1775,7 @@ const Plant = props => {
       <BellPepper
         position={props.position}
         name={props.name}
+        scale={props.scale}
       />
     );
   }
@@ -1779,6 +1784,7 @@ const Plant = props => {
       <Carrot
         position={props.position}
         name={props.name}
+        scale={props.scale}
       />
     );
   }
@@ -1786,6 +1792,7 @@ const Plant = props => {
     <Onion
       position={props.position}
       name={props.name}
+      scale={props.scale}
     />
   );
 }

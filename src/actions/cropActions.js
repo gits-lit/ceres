@@ -20,6 +20,7 @@ export const removeCrop = (name) => async dispatch => {
 }
 
 export const changeWeek = ( week) => async dispatch => {
+  console.log('Changed week to ', week);
   dispatch({
     type: WEEK_UPDATE,
     payload: week

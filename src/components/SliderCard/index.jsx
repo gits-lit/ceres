@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { Slider } from 'antd';
 import { FrownOutlined, SmileOutlined } from '@ant-design/icons';
+
+import { changeWeek } from '../../actions/cropActions';
 
 import './style.less';
 
@@ -8,12 +11,12 @@ const SliderCard = props => {
   const [sval, setVal] = useState(0);
 
   const marks = {
-    0: '0M',
-    6: '6M',
-    12: '12M',
+    0: '0W',
+    10: '10W',
+    20: '20W',
   };
 
-  const mid = 6;
+  const mid = 10;
   const preColorCls = sval >= mid ? '' : 'icon-wrapper-active';
   const nextColorCls = sval >= mid ? 'icon-wrapper-active' : '';
 
@@ -22,18 +25,18 @@ const SliderCard = props => {
   };
 
   function onAfterChange(value) {
-    console.log('onAfterChange: ', value);
+    props.changeWeek(value);
   }
 
   return (
     <div className="slidercard">
       <div className="slider_wrapper">
-        <h1>Slide across different time</h1>
+        <h1>Slide across to call Janus to change time! You can plant crops at different time periods.</h1>
         <div className="icon-wrapper">
           <FrownOutlined className={preColorCls} />
           <Slider
             marks={marks}
-            max={12}
+            max={20}
             min={0}
             size="large"
             onChange={handleChange}
@@ -47,4 +50,7 @@ const SliderCard = props => {
   );
 };
 
-export default SliderCard;
+export default connect(
+  null,
+  { changeWeek }
+)(SliderCard);

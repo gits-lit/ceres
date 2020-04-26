@@ -27,7 +27,7 @@ const Garden = props => {
                 <Suspense fallback={null}>
                   <ambientLight />
                   <pointLight intensity={0.7} position={[10000, 10000, 10000]} />
-                  <Field crops={props.crops}/>
+                  <Field crops={props.crops} week={props.week}/>
                 </Suspense>
               </Canvas>
             </div>

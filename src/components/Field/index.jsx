@@ -42,11 +42,11 @@ const Field = props => {
       >
       <Dirt position={[-10, -10, -10]}/>
       {props.crops.map((crop, index) => {
-        if(crop != null) {
+        if(crop != null && crop[1] <= props.week) {
           console.log('hi' + crop[0])
           const subcoords = coords[index];
           return (
-            <Plant name={crop[0]} position={[subcoords[0], 0, subcoords[1]]} key={`plant-${index}`}/>
+            <Plant scale={Math.min((props.week - crop[1] + 1) / 5)} name={crop[0]} position={[subcoords[0], 0, subcoords[1]]} key={`plant-${index}`}/>
           );
         }
       })}
