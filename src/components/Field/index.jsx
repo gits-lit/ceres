@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { Canvas, useFrame } from 'react-three-fiber';
 
 import './style.less';
@@ -10,9 +10,9 @@ function Dirt(props) {
   return (
     <mesh
       {...props}
-      scale={[.01, .01, .01]}>
-      <boxBufferGeometry attach="geometry" args={[150, 150, 150]} />
-      <meshStandardMaterial attach="material" color={"#000000"} />
+      >
+      <boxBufferGeometry attach="geometry" args={[500, 10, 500]} />
+      <meshStandardMaterial attach="material" color={"#9B7653"} />
     </mesh>
   )
 }
@@ -21,13 +21,21 @@ const Field = props => {
 
   const field = useRef();
 
+  useEffect(() => {
+    field.current.rotation.x = .15;
+  });
+
   // Rotate mesh every frame, this is outside of React without overhead
-  useFrame(() => {field.current.rotation.y += 0.01});
+  useFrame(() => {
+    field.current.rotation.y += 0.005;
+  });
 
   return (
-    <group ref={field}>
+    <group ref={field}
+      scale={[.01, .01, .01]}
+      >
       <Dirt position={[-10, -10, -10]}/>
-      <Plant />
+      <Plant position={[-200, 0, -200]}/>
     </group>
   );
 }
