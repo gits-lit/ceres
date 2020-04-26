@@ -7,8 +7,8 @@
         "calories": 80,
         "good-companionship": ["carrots", "onions", "bellPeppers"],
         "bad-companionship": ["potatoes"],
-        "good-companionship-tip": "together they control early and light blight",
-        "bad-companionship-tip": "together they can get attacked by the same blight"
+        "good-companionship-tip": "Together they control early and light blight.",
+        "bad-companionship-tip": "Together they can get attacked by the same blight."
     },
     "potatoes": {
         "harvest-length": 12,
@@ -18,8 +18,8 @@
         "calories": 352,
         "good-companionship": ["onions", "cabbages"],
         "bad-companionship": ["tomatoes"],
-        "good-companionship-tip": "together they provide protection to each other",
-        "bad-companionship-tip": "together they can get attacked by the same blight"
+        "good-companionship-tip": "Together they provide protection to each other.",
+        "bad-companionship-tip": "Together they can get attacked by the same blight."
     },
     "onions": {
         "harvest-length": 16,
@@ -29,8 +29,8 @@
         "calories": 176,
         "good-companionship": ["tomatoes", "cabbages", "carrots", "bellPeppers"],
         "bad-companionship": ["lettuce"],
-        "good-companionship-tip": "together they raise nutrients into soil to improve growth and health",
-        "bad-companionship-tip": "together they prevent each other's growth"
+        "good-companionship-tip": "Together they raise nutrients into soil to improve growth and health.",
+        "bad-companionship-tip": "Together they prevent each other's growth."
     },
     "carrots": {
         "harvest-length": 9,
@@ -40,8 +40,8 @@
         "calories": 176,
         "good-companionship": ["tomatoes", "onions", "bellPeppers"],
         "bad-companionship": ["radish"],
-        "good-companionship-tip": "together they improve growth and flavor",
-        "bad-companionship-tip": "together they prevent each other's growth"
+        "good-companionship-tip": "Together they improve growth and flavor.",
+        "bad-companionship-tip": "Together they prevent each other's growth."
     },
 
     "cabbages": {
@@ -52,8 +52,8 @@
         "calories": 112,
         "good-companionship": ["onions, potatoes"],
         "bad-companionship": ["tomatoes", "bellPeppers"],
-        "good-companionship-tip": "together they improve health and growth",
-        "bad-companionship-tip": "together they prevent each other's growth"
+        "good-companionship-tip": "Together they improve health and growth.",
+        "bad-companionship-tip": "Together they prevent each other's growth."
     },
     "bellPeppers": {
         "harvest-length": 11,
@@ -63,7 +63,7 @@
         "calories": 96,
         "good-companionship": ["onions", "carrots", "tomatoes"],
         "bad-companionship": [ "cabbages"],
-        "good-companionship-tip": "together they improve each other's speed and nutrition ",
-        "bad-companionship-tip": "together they will cause a fungal disease"
+        "good-companionship-tip": "Together they improve each other's speed and nutrition.",
+        "bad-companionship-tip": "Together they will cause a fungal disease."
     }
-} 
+}

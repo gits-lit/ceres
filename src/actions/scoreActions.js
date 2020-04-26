@@ -1,8 +1,6 @@
 import { SCORE_UPDATE, TIP_UPDATE } from './types';
 
-export const updateScore = (crops) => async dispatch => {
-
-  const scores = ['', '', '', '']
+export const updateScore = (scores) => async dispatch => {
   dispatch({
     type: SCORE_UPDATE,
     payload: {
@@ -14,9 +12,7 @@ export const updateScore = (crops) => async dispatch => {
   });
 }
 
-export const updateTip = (crops) => async dispatch => {
-  const tip = ''
-
+export const updateTip = (tip) => async dispatch => {
   dispatch({
     type: TIP_UPDATE,
     payload: tip

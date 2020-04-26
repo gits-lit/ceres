@@ -12,7 +12,7 @@ const ProfileReducer = (state = initialState, action) => {
       return {
         ...state,
         name: action.payload.name,
-        location: action.payload.locaton,
+        location: action.payload.location,
         sqFt: action.payload.sqFt
       }
   default:

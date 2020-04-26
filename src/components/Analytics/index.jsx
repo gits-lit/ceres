@@ -16,10 +16,10 @@ const Analytics = props => {
           Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web
           designs. The passage is attributed to an unknown typesetter in the 15th century who is thought
         </p>
-        <StatsCard emoji="💧"/>
-        <StatsCard emoji="😷"/>
-        <StatsCard emoji="😋"/>
-        <FinalScore />
+        <StatsCard emoji="💧" name="Water Usage" val={props.water} unit="gallons"/>
+        <StatsCard emoji="😷" name="Carbon Output" val={props.carbon} unit="co2e"/>
+        <StatsCard emoji="😋" name="Produce Produced" val={props.pounds} unit="pounds"/>
+        <FinalScore score={props.score}/>
       </div>
     </div>
   );

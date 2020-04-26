@@ -5,7 +5,7 @@ const initialState = {
   water: '',
   pounds: '',
   score: '',
-  tip: ''
+  tip: 'Add some plants so I can judge your garden!'
 }
 
 const ScoreReducer = (state = initialState, action) => {

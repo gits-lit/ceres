@@ -15,6 +15,8 @@ const GardenPage = props => {
     <Garden
       crops={crops}
       week={props.week}
+      gardenName={props.gardenName}
+      locationName={props.locationName}
     />
   );
 }
@@ -27,7 +29,9 @@ const mapStateToProps = state => ({
   cabbages: state.crops.cabbages,
   carrots: state.crops.carrots,
   bellPeppers: state.crops.bellPeppers,
-  week: state.crops.currentWeek
+  week: state.crops.currentWeek,
+  gardenName: state.profile.name,
+  locationName: state.profile.location
 })
 
 export default connect(

@@ -7,7 +7,7 @@ import Navbar from '../Navbar';
 import Tips from '../Tips';
 import SliderCard from '../SliderCard';
 import Dashboard from '../Dashboard';
-import Analytics from '../Analytics';
+import Analytics from '../../containers/Analytics';
 
 import tips from '../../assets/tips.svg';
 import time from '../../assets/time.svg';
@@ -47,7 +47,7 @@ const Garden = props => {
         </div>
         <div className="right_div">
           <div className="right_wrapper">
-            <h1>Snu's Garden <span className="location">| Location: UCSD</span></h1>
+            <h1>{props.gardenName}<span className="location">| Location: {props.locationName}</span></h1>
             <Dashboard />
             <Analytics />
           </div>
