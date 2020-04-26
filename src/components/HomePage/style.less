@@ -1,38 +1,116 @@
 .home-page {
-  .left {
-    padding: 1%;
+  overflow: hidden;
+  height: 100vh;
+
+
+  .logo {
+    position: fixed;
+    top: 3%;
+    left: 2%;
   }
 
-  .h1{
-    font-size: 24px;
-    font-weight: bold;
+
+  .flex_wrapper {
+    display: flex;
+
+    .left {
+      width: 50vw;
+      padding: 1.5% 2%;
+      margin-top: 5vh;
+
+      .text_wrap {
+        padding-left: 5%;
+
+        h1 {
+          font-weight: 700;
+          font-size: 5.5rem;
+          height: 10vh;
+        }
+
+        h2 {
+          font-weight: 400;
+          font-size: 4rem;
+          // letter-spacing: 4px;
+          line-height: 4vh;
+          height: 5vh;
+        }
+
+        h3 {
+          margin-top: 3vh;
+          font-size: 1.6rem;
+          font-weight: 400;
+        }
+
+
+        .button {
+          margin-top: 10vh;
+          border-bottom: 4px solid #374AAC;
+          width: 30%;
+          height: 55px;
+          transition: all 0.4s cubic-bezier(.25, .8, .25, 1);
+
+          h2 {
+            font-size: 2.3rem;
+
+          }
+
+          &:hover {
+            cursor: pointer;
+            background-color: #374AAC;
+            transform: translateY(-2px);
+            width: 32%;
+            padding-top: 10px;
+            padding-left: 2px;
+
+            h2 {
+              color: white;
+            }
+          }
+        }
+      }
+
+      .tag {
+        margin-top: 7.5vw;
+        margin-bottom: 7.5vw;
+        color: white;
+        height: 3.5vh;
+        width: 16vw;
+        font-size: 1.5rem;
+        background-color: #374AAC;
+        font-weight: 6s00;
+      }
+
+    }
+
+    .right {
+      width: 50vw;
+      background-color: #374AAC;
+      height: 100vh;
+
+      .strawberry {
+        position: absolute;
+        top: 30%;
+        right: 13%;
+        height: 40%;
+        transform: rotate(10deg);
+      }
+
+      .rightbar {
+        position: absolute;
+        top: 5%;
+        right: 1%;
+        height: 90%;
+      }
+    }
+
+    .left {
+      width: 50vw;
+    }
   }
 
-  .h2{
-    font-size: 18px;
-  }
 
-  .h4{
-    font-size: 16px;
-    font-weight: lighter;
-  }
+}
 
-  .highlight {
-    color: white;
-    background-color:#374AAC;
-  }
-
-  .strawberry {
-    position: absolute;
-    right: 8%;
-    top: 30%;
-    z-index: 1;
-  }
-
-  .page1 {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 0;
-  }
+.home-page::-webkit-scrollbar {
+  display: none;
 }

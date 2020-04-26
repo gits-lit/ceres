@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { ConnectedRouter } from 'connected-react-router';
 import { Route, Switch } from 'react-router-dom';
@@ -13,6 +13,7 @@ import HomePage from './components/HomePage';
 const store = configureStore();
 
 const App = () => {
+
   return (
     <Provider store={store}>
       <ConnectedRouter history={history}>

@@ -1,29 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { animateScroll as scroll } from 'react-scroll';
 
 import './style.less';
 import Logo from '../../assets/logo.svg';
 import Strawberry from '../../assets/strawberry.png';
-import Page1 from '../../assets/page1.svg';
-
-
+import RightBar from '../../assets/right_bar.svg';
+import SecondPage from '../SecondPage';
 
 const HomePage = props => {
+
+  function scrolltobottom() {
+    scroll.scrollToBottom();
+  }
+
   return (
-    <div className="home-page">
+    <div>
+      <div className="home-page">
+        <div className="flex_wrapper">
+        <img className="logo" src={Logo} />
 
-      <div className="left">
-        <img src={Logo}/>
-        <h3 className="highlight">garden simulator</h3>
-        <h1 className="h1">Ceres</h1>
-        <h2 className="h2">Grow the garden of your dreams</h2>
-        <h4 className="h4">predict, analyze, simulate</h4>
-        <a href="">grow now</a>
+          <div className="left">
+            <div className="text_wrap">
+              <p className="tag">garden simulator</p>
+              <h1>Ceres</h1>
+              <h2>Grow the garden of</h2>
+              <br />
+              <h2>your dreams</h2>
+              <h3>predict, analyze, simulate</h3>
+                <div className="button" onClick={scrolltobottom}>
+                  <h2>grow now</h2>
+                </div>
+            </div>
+          </div>
+          <div className="right">
+            <img className="strawberry" src={Strawberry} />
+            <img className="rightbar" src={RightBar} />
+          </div>
+        </div>
       </div>
-
-      <img className="page1" src={Page1}/>
-      <img className="strawberry" src={Strawberry}/>
-
-
+      <SecondPage name="pg2" />
     </div>
   );
 };
