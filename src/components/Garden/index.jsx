@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { Suspense, useRef, useState } from 'react';
 import { Canvas, useFrame } from 'react-three-fiber';
 
 import './style.less';
@@ -6,8 +6,6 @@ import Field from '../Field';
 import Navbar from '../Navbar';
 import Tips from '../Tips';
 import Slider from '../Slider';
-import Dashboard from '../Dashboard';
-import Analytics from '../Analytics';
 
 import tips from '../../assets/tips.svg';
 import time from '../../assets/time.svg';
@@ -17,14 +15,15 @@ const Garden = props => {
   return (
     <div className="garden">
       <Navbar />
-      <div className="flex_wrapper">
       <div className="side_div">
         <div className="side_wrapper">
           <div className="c_wrapper">
             <Canvas>
-              <ambientLight />
-              <pointLight position={[10, 10, 10]} />
-              <Field />
+              <Suspense fallback={null}>
+                <ambientLight />
+                <pointLight intensity={.4} position={[10000, 10000, 10000]} />
+                <Field />
+              </Suspense>
             </Canvas>
           </div>
           <div className="side_row">
@@ -40,14 +39,6 @@ const Garden = props => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="right_div">
-        <div className="right_wrapper">
-          <h1>Snu's Garden <span className="location">| Location: UCSD </span></h1>
-          <Dashboard />
-          <Analytics />
-        </div>
-      </div>
       </div>
       <img className="bg" src={bg2} alt="bg" />
     </div>
