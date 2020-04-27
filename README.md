@@ -1,4 +1,4 @@
-# 🌱 Ceres | The World's First Garden Planner
+# 🌱 Ceres | An urban farming planner utilizing data for communal sustainability | Built at Citrus Hacks 2020
 
 ## Getting Started
 Install the dependencies
